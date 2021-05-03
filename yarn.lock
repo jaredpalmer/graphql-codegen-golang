@@ -363,6 +363,11 @@
   dependencies:
     tslib "^2.0.0"
 
+"@graphql-inspector/config@^2.5.0":
+  version "2.5.0"
+  resolved "https://registry.yarnpkg.com/@graphql-inspector/config/-/config-2.5.0.tgz#239db4c01bd6cfdca78192d3f15009a827932f7e"
+  integrity sha512-3mUO+Px7SVvhoUzGKAVPSXcGcSDDUwz2bUnXVC/pT8iSEjkQBYBQdAQgy5HoUlaDiWhz2Phl2s4BaaEeafGdXQ==
+
 "@graphql-inspector/core@2.5.0":
   version "2.5.0"
   resolved "https://registry.yarnpkg.com/@graphql-inspector/core/-/core-2.5.0.tgz#7682c4fac0e7c27bf21d94bb87ca7983894fbf8f"
