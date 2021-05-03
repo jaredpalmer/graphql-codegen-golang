@@ -162,7 +162,7 @@
     "@graphql-tools/utils" "^6.0.18"
     tslib "~2.0.0"
 
-"@graphql-codegen/plugin-helpers@1.17.8", "@graphql-codegen/plugin-helpers@^1.17.8":
+"@graphql-codegen/plugin-helpers@^1.17.8":
   version "1.17.8"
   resolved "https://registry.yarnpkg.com/@graphql-codegen/plugin-helpers/-/plugin-helpers-1.17.8.tgz#d47e8bd6b425b38cfc4e2d670b31183b8e9a91e8"
   integrity sha512-Ck1E4QC4yrhX5zUtMlc/uloly6TWSpJDA7+aJrdMOY+MEUgrrM7wJsLV9azNae2OmrhZAQopSuGezjHNbsqSdA==
@@ -2049,10 +2049,10 @@ graphql-request@^3.0.0:
   dependencies:
     cross-fetch "^3.0.4"
 
-graphql@15.3.0:
-  version "15.3.0"
-  resolved "https://registry.yarnpkg.com/graphql/-/graphql-15.3.0.tgz#3ad2b0caab0d110e3be4a5a9b2aa281e362b5278"
-  integrity sha512-GTCJtzJmkFLWRfFJuoo9RWWa/FfamUHgiFosxi/X1Ani4AVWbeyBenZTNX6dM+7WSbbFfTo/25eh0LLkwHMw2w==
+graphql@^15.5.0:
+  version "15.5.0"
+  resolved "https://registry.yarnpkg.com/graphql/-/graphql-15.5.0.tgz#39d19494dbe69d1ea719915b578bf920344a69d5"
+  integrity sha512-OmaM7y0kaK31NKG31q4YbD2beNYa6jBBKtMFT6gLYJljHLJr42IqJ8KX08u3Li/0ifzTU5HjmoOOrwa5BRLeDA==
 
 har-schema@^2.0.0:
   version "2.0.0"
@@ -2600,10 +2600,10 @@ lint-staged@10.2.12:
     string-argv "0.3.1"
     stringify-object "^3.3.0"
 
-liquidjs@9.15.0:
-  version "9.15.0"
-  resolved "https://registry.yarnpkg.com/liquidjs/-/liquidjs-9.15.0.tgz#03e8c13aeda89801a346c614b0802f320458d0ac"
-  integrity sha512-wRPNfMx6X3GGEDqTlBpw7VMo8ylKkzLYTcd7eeaDeYnZyR5BqUgF9tZy3FdPCHV2N/BassGKmlmlpJiRXGFOqg==
+liquidjs@^9.15.0:
+  version "9.24.1"
+  resolved "https://registry.yarnpkg.com/liquidjs/-/liquidjs-9.24.1.tgz#328744ed2e65cdd9904e4ecbb47213d78229a5b5"
+  integrity sha512-pDgJ0iClC05+HV9M9+NbjQnQ9gZraYTNtfdf36GU97h/EnQCtoNTybKJySOBqo8UKPNTqn7wmkt1EK/EFCBbWw==
 
 listr-silent-renderer@^1.1.1:
   version "1.1.1"
