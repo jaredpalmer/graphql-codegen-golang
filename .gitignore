@@ -2,7 +2,3 @@ node_modules/
 *.tsbuildinfo
 *.log
 /dist/
-/pkg/*/graphql.go
-/pkg/*/schema.graphql
-!/pkg/graphql/schema.graphql
-go.mod

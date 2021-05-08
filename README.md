@@ -37,7 +37,7 @@ documents: pkg/graphql/!(schema).graphql
 generates:
   pkg/graphql/graphql.go:
     hooks:
-      afterOneFileWrite: go fmt
+      afterOneFileWrite: go fmt # make sure that go is installed if you do this
     plugins:
       - graphql-codegen-golang:
           packageName: graphql # default
