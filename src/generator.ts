@@ -274,6 +274,36 @@ export class GolangGenerator {
     visit(
       document,
       visitWithTypeInfo(typeInfo, {
+        FragmentSpread: {
+          enter: field => {
+            const name = this.formatName(field.name.value)
+            l.push(` ${name} `)
+          },
+        },
+        FragmentDefinition: {
+          enter: field => {
+            const name = this.formatName(field.name.value)
+            const w = [`type  ${name} `]
+            if (field.selectionSet) {
+              const outputType = typeInfo.getType()?.toString()
+              if (outputType?.startsWith('[')) {
+                if (!outputType.endsWith('!')) {
+                  w.push('*')
+                }
+                w.push('[]')
+              }
+              w.push('struct {')
+            } else {
+              w.push(`string \`json:"${field.name.value}"\``)
+            }
+            l.push(w.join(''))
+          },
+          leave: field => {
+            if (field.selectionSet) {
+              l.push(`}`)
+            }
+          },
+        },
         OperationDefinition: {
           enter: operation => {
             // Anonymous operation are not supported: skip them.
@@ -321,6 +351,7 @@ export class GolangGenerator {
           enter: field => {
             const name = this.formatName(field.name.value)
             const w = [`  ${name} `]
+
             if (field.selectionSet) {
               const outputType = typeInfo.getType()?.toString()
               if (outputType?.startsWith('[')) {
