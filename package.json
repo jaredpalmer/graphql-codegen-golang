@@ -1,6 +1,6 @@
 {
   "name": "@jaredpalmer/graphql-codegen-golang",
-  "version": "1.0.1",
+  "version": "1.1.0",
   "description": "Graphql Code Generator plugin for generating Golang",
   "scripts": {
     "dev": "yarn run build && yarn run codegen",
