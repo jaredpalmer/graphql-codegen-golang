@@ -5,3 +5,4 @@ node_modules/
 /pkg/*/graphql.go
 /pkg/*/schema.graphql
 !/pkg/graphql/schema.graphql
+go.mod
