@@ -5,7 +5,7 @@
   "scripts": {
     "dev": "yarn run build && yarn run codegen",
     "build": "tsc",
-    "codegen": "yarn run graphql-codegen",
+    "codegen": "yarn graphql-codegen --project rick && yarn graphql-codegen",
     "test": "go test -v ./pkg/rickandmorty/",
     "mock": "graphql-inspector serve graphql/schema.graphql",
     "format": "prettier --write '**/*.{js,jsx,ts,tsx,json,yaml,gql,md,html,css}'",

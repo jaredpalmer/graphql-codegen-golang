@@ -10,7 +10,7 @@ projects:
               afterOneFileWrite: go fmt
             plugins:
               - dist/index.js
-  rickandmorty:
+  rick:
     schema: https://rickandmortyapi.com/graphql/
     documents: pkg/rickandmorty/document.graphql
     extensions:
