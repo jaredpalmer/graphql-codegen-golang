@@ -274,6 +274,12 @@ export class GolangGenerator {
     visit(
       document,
       visitWithTypeInfo(typeInfo, {
+        FragmentSpread: {
+          enter: field => {
+            const name = this.formatName(field.name.value)
+            l.push(` ${name} `)
+          },
+        },
         FragmentDefinition: {
           enter: field => {
             const name = this.formatName(field.name.value)
@@ -345,6 +351,7 @@ export class GolangGenerator {
           enter: field => {
             const name = this.formatName(field.name.value)
             const w = [`  ${name} `]
+
             if (field.selectionSet) {
               const outputType = typeInfo.getType()?.toString()
               if (outputType?.startsWith('[')) {
