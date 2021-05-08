@@ -1,15 +1,14 @@
-# GraphQL Code Generator plugin for generating Golang
+# GraphQL Code Generator plugin for Golang
 
-> This package is work in progress.
+> This package is a fork of ctison/graphql-codegen-golang with support for GraphQL fragments. It does not support subscriptions
 
 ## Roadmap
 
 - [x] Generate types
 - [x] Generate queries and mutations
-- [ ] Generate subscriptions with gorilla websocket
-- [ ] Add more configuration options
-- [ ] Avoid collisions ?
-- [ ] Write tests
+- [x] Generate fragments
+- [ ] Generate subscriptions
+- [ ] Allow api client to accept a global http options (e.g. authorization header for a bearer token)
 
 This package generates Golang types and requests which use:
 
@@ -22,11 +21,11 @@ This package generates Golang types and requests which use:
 
 ## Install
 
-The package is published to [graphql-codegen-golang](https://www.npmjs.com/package/graphql-codegen-golang).
+The package is published to [@jaredpalmer/graphql-codegen-golang](https://www.npmjs.com/package/@jaredpalmer/graphql-codegen-golang).
 
 ```
-npm install -D graphql-codegen-golang
-yarn install -D graphql-codegen-golang
+npm install -D @jaredpalmer/graphql-codegen-golang
+yarn install -D @jaredpalmer/graphql-codegen-golang
 ```
 
 ## Usage: `codegen.yaml`
@@ -37,7 +36,7 @@ documents: pkg/graphql/!(schema).graphql
 generates:
   pkg/graphql/graphql.go:
     hooks:
-      afterOneFileWrite: go fmt # make sure that go is installed if you do this
+      afterOneFileWrite: go fmt
     plugins:
       - graphql-codegen-golang:
           packageName: graphql # default
